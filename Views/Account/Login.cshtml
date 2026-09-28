@@ -1,0 +1,47 @@
+﻿@model baitapbuoi4.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Đăng nhập</h2>
+
+<form asp-controller="Account"
+      asp-action="Login"
+      method="post">
+
+    <div class="mb-3">
+        <label>Username</label>
+
+        <input asp-for="Username"
+               class="form-control"
+               style="width: 300px;" />
+    </div>
+
+    <div class="mb-3">
+        <label>Password</label>
+
+        <input asp-for="Password"
+               type="password"
+               class="form-control"
+               style="width: 300px;" />
+    </div>
+
+    <button type="submit"
+            class="btn btn-primary">
+        Login
+    </button>
+
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <br />
+
+    <div class="alert alert-info"
+         style="width: 300px;">
+
+        @ViewBag.Message
+
+    </div>
+}

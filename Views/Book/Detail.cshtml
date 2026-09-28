@@ -1,0 +1,39 @@
+﻿@model baitapbuoi4.Models.Book
+
+@{
+    ViewData["Title"] = "Chi tiết sách";
+}
+
+<div class="container mt-4">
+
+    <h2>Chi tiết sách</h2>
+
+    <table class="table table-bordered"
+           style="max-width: 500px;">
+
+        <tr>
+            <th>Id</th>
+            <td>@Model.Id</td>
+        </tr>
+
+        <tr>
+            <th>Tên sách</th>
+            <td>@Model.Name</td>
+        </tr>
+
+        <tr>
+            <th>Giá</th>
+            <td>@Model.Price</td>
+        </tr>
+
+    </table>
+
+    <a asp-controller="Book"
+       asp-action="Index"
+       class="btn btn-secondary">
+
+        Quay lại danh sách
+
+    </a>
+
+</div>
